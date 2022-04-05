@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:fitsSystemWindows="true"
+    android:background="#242424"
+    android:gravity="center"
+    tools:context=".ui.signUp.SingUpFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_black"
+        android:layout_marginTop="20dp"
+        android:text="Sign Up"
+        android:textColor="#FFFFFF"
+        android:textSize="38sp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardMaxElevation="12dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        >
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:background="@color/teal_200">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:background="@drawable/et_style"
+                        android:shadowRadius="40"
+                        android:hint="Student ID"
+                        android:textColor="#232222"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:textColorHint="#5A5050" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:fontFamily="@font/roboto_light"
+                        android:background="@drawable/et_style"
+                        android:hint="Email"
+                        android:textColor="#232222"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:textColorHint="#5A5050" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:background="@drawable/et_style"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="Password"
+                        android:textColor="#232222"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:textColorHint="#5A5050" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:gravity="center">
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:background="@drawable/et_style"
+                        android:textColor="#232222"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="Conform Password"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:textColorHint="#5A5050"
+                        />
+                </LinearLayout>
+
+
+
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+
+
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0sp"
+        android:layout_weight="2.3">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="left|center">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_ui_grad"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_rectangle_grad"
+                        android:fontFamily="@font/roboto_medium"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginBottom="50dp"
+                        android:text="Sign Up"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="23sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</LinearLayout>
