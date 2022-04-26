@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_margin="10dp"
+    android:background="#54A4E4"
+    app:cardElevation="6dp">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="185dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/black"
+        android:text="subject_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/longitude"
+        android:layout_width="179dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="132dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:text="lecturer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latitude" />
+
+    <ImageView
+        android:id="@+id/idforimageview"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/uni_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/latitude"
+        android:layout_width="184dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="52dp"
+        android:textColor="@color/black"
+        android:layout_marginTop="8dp"
+        android:text="subject_id"
+        app:layout_constraintStart_toEndOf="@+id/idforimageview"
+        app:layout_constraintTop_toBottomOf="@+id/name" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
