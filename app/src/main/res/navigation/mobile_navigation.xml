@@ -27,13 +27,24 @@
         android:id="@+id/login"
         android:name="com.kelaniya.android.myapplication.ui.login.LoginFragment"
         android:label="@string/login_fragment"
-        tools:layout="@layout/fragment_login" />
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_login_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_login_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
 
     <fragment
         android:id="@+id/signUp"
         android:name="com.kelaniya.android.myapplication.ui.signUp.SingUpFragment"
         android:label="@string/action_sign_in"
-        tools:layout="@layout/fragment_sing_up" />
+        tools:layout="@layout/fragment_sing_up" >
+        <action
+            android:id="@+id/action_signUp_to_login"
+            app:destination="@id/login" />
+    </fragment>
 
 
 
