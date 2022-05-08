@@ -9,26 +9,37 @@
     app:cardElevation="6dp">
 
     <TextView
-        android:id="@+id/name"
-        android:layout_width="185dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="128dp"
-        android:layout_marginTop="16dp"
+        android:id="@+id/level"
+        android:layout_width="274dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="40dp"
+        android:text="level"
         android:textColor="@color/black"
-        android:text="subject_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/subject_name" />
+
+    <TextView
+        android:id="@+id/description_of_lectuer_note"
+        android:layout_width="274dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:text="course ID"
+        android:textColor="@color/black"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/longitude"
-        android:layout_width="179dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="132dp"
+        android:id="@+id/department_name"
+        android:layout_width="274dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="10dp"
+        android:text="department"
         android:textColor="@color/black"
-        android:layout_marginTop="8dp"
-        android:text="lecturer"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/latitude" />
+        app:layout_constraintTop_toBottomOf="@+id/subject_name" />
 
     <ImageView
         android:id="@+id/idforimageview"
@@ -36,20 +47,20 @@
         android:layout_height="64dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="48dp"
-        android:background="@drawable/uni_logo"
+        android:background="@drawable/course_icon1"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/latitude"
-        android:layout_width="184dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="52dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="8dp"
+        android:id="@+id/subject_name"
+        android:layout_width="274dp"
+        android:layout_height="21dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="10dp"
         android:text="subject_id"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/idforimageview"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintTop_toBottomOf="@+id/description_of_lectuer_note" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
