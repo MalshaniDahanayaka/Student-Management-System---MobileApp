@@ -3,25 +3,95 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/login">
+    app:startDestination="@id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
         android:name="com.kelaniya.android.myapplication.ui.home.HomeFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_connetion_error"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_nav_home_to_connetion_error2"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_nav_home_to_about_course"
+            app:destination="@id/about_course" />
+        <action
+            android:id="@+id/action_nav_home_to_course_lecture_notes"
+            app:destination="@id/course_lecture_notes" />
+        <action
+            android:id="@+id/action_nav_home_to_connetion_error3"
+            app:destination="@id/connetion_error" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="com.kelaniya.android.myapplication.ui.gallery.GalleryFragment"
+        android:name="com.kelaniya.android.myapplication.ui.my_courses.MyCoursesFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_my_courses" >
+        <action
+            android:id="@+id/action_nav_gallery_to_connetion_error"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_nav_gallery_to_course_lecture_notes"
+            app:destination="@id/course_lecture_notes" />
+        <action
+            android:id="@+id/action_nav_gallery_to_connetion_error2"
+            app:destination="@id/connetion_error" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="com.kelaniya.android.myapplication.ui.slideshow.SlideshowFragment"
+        android:name="com.kelaniya.android.myapplication.ui.marks_and_grades.MarksAndGradesFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_marks_and_grades" >
+        <action
+            android:id="@+id/action_nav_slideshow_to_connetion_error"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_nav_slideshow_to_connetion_error2"
+            app:destination="@id/connetion_error" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/connetion_error"
+        android:name="com.kelaniya.android.myapplication.api.ConnectionError"
+        android:label="connection Error"
+        tools:layout="@layout/fragment_connection_error" >
+        <action
+            android:id="@+id/action_connetion_error_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_connetion_error_to_nav_home2"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_connetion_error_to_login"
+            app:destination="@id/login" />
+        <action
+            android:id="@+id/action_connetion_error_to_nav_gallery"
+            app:destination="@id/nav_gallery" />
+        <action
+            android:id="@+id/action_connetion_error_to_nav_slideshow"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_connetion_error_to_about_course"
+            app:destination="@id/about_course" />
+        <action
+            android:id="@+id/action_connetion_error_to_course_lecture_notes"
+            app:destination="@id/course_lecture_notes" />
+        <action
+            android:id="@+id/action_connetion_error_to_nav_home3"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_connetion_error_to_nav_slideshow2"
+            app:destination="@id/nav_slideshow" />
+        <action
+            android:id="@+id/action_connetion_error_to_signUp"
+            app:destination="@id/signUp" />
+    </fragment>
 
     <fragment
         android:id="@+id/login"
@@ -34,6 +104,9 @@
         <action
             android:id="@+id/action_login_to_signUp"
             app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_login_to_connetion_error"
+            app:destination="@id/connetion_error" />
     </fragment>
 
     <fragment
@@ -44,7 +117,39 @@
         <action
             android:id="@+id/action_signUp_to_login"
             app:destination="@id/login" />
+        <action
+            android:id="@+id/action_signUp_to_connetion_error"
+            app:destination="@id/connetion_error" />
     </fragment>
+
+
+    <fragment
+        android:id="@+id/about_course"
+        android:name="com.kelaniya.android.myapplication.ui.course_details.AboutCourseFragment"
+        android:label="Course Details"
+        tools:layout="@layout/fragment_about_course" >
+        <action
+            android:id="@+id/action_about_course_to_nav_home"
+            app:destination="@id/nav_home" />
+        <action
+            android:id="@+id/action_about_course_to_course_lecture_notes"
+            app:destination="@id/course_lecture_notes" />
+        <action
+            android:id="@+id/action_about_course_to_connetion_error"
+            app:destination="@id/connetion_error" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/course_lecture_notes"
+        android:name="com.kelaniya.android.myapplication.ui.course_lecture_notes.CourseLectureNotesFragment"
+        android:label="Lecture Notes In Course"
+        tools:layout="@layout/fragment_course_lecture_notes" >
+        <action
+            android:id="@+id/action_course_lecture_notes_to_connetion_error"
+            app:destination="@id/connetion_error" />
+    </fragment>
+
 
 
 
