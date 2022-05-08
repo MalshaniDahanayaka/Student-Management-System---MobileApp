@@ -1,4 +1,4 @@
-package com.kelaniya.android.myapplication.ui.slideshow
+package com.kelaniya.android.myapplication.ui.marks_and_grades
 
 import android.os.Bundle
 import android.view.LayoutInflater
