@@ -1,4 +1,4 @@
-package com.kelaniya.android.myapplication.ui.gallery
+package com.kelaniya.android.myapplication.ui.my_courses
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

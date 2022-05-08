@@ -1,4 +1,4 @@
-package com.kelaniya.android.myapplication.ui.gallery
+package com.kelaniya.android.myapplication.ui.my_courses
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -28,7 +28,7 @@ class MyCoursesFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.button.setOnClickListener {
             val email = GetUserDetails().getData(view.context)
-            Toast.makeText(view.context,email, Toast.LENGTH_SHORT).show()
+            Toast.makeText(view.context,email.jwtToken, Toast.LENGTH_SHORT).show()
 
 
         }
