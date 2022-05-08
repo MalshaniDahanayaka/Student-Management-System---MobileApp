@@ -1,4 +1,4 @@
-package com.kelaniya.android.myapplication.data.response_data
+package com.kelaniya.android.myapplication.ui.home
 
 import android.os.Bundle
 import android.util.Log
@@ -8,7 +8,6 @@ import com.kelaniya.android.myapplication.R
 import com.kelaniya.android.myapplication.adapter.Adapter
 import com.kelaniya.android.myapplication.api.RetrofitBuilder
 import com.kelaniya.android.myapplication.model.Courses
-import com.kelaniya.android.myapplication.model.StudentsEnrollSubjects
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
