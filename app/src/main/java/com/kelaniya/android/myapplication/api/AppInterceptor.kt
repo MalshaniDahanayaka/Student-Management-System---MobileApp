@@ -9,7 +9,7 @@ open class AppInterceptor : Interceptor {
 
 
 
-    private val validTokenValue:String = "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJza2FzdW5tazk4QGdtYWlsLmNvbSIsImV4cCI6MTY1MTk5NzY5MSwiaWF0IjoxNjUxOTExMjkxfQ._eilLqBLs3AROHhQU8xjLGHbELHjc_JprNRUn25t-HG0yqak3d0aV8HuN1K_TlkEpAOUdInlg_bXgXjxohAq3w"
+    private val validTokenValue:String = "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJza2FzdW5tazk4QGdtYWlsLmNvbSIsImV4cCI6MTY1Mjc1OTE3NCwiaWF0IjoxNjUyNjcyNzc0fQ.RkRq_6hoDfdsUJ0_Wcvm4VPw61W2vRLJd6vOJq5WjASZja_PQ3fZbh6TGXbJE6rx69aJELfE2fpMP0l9ghG9Kw"
 
 
 

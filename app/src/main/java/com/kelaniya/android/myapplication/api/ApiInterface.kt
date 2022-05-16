@@ -1,8 +1,10 @@
 package com.kelaniya.android.myapplication.api
 
 import com.kelaniya.android.myapplication.model.*
+import okhttp3.ResponseBody
 import org.json.JSONObject
 import retrofit2.Call
+import retrofit2.Response
 import retrofit2.http.*
 
 
@@ -33,6 +35,22 @@ interface ApiInterface {
 
     @GET("/api/enrolled_course_detailsRP/{courseID}/{academicYear}")
     fun getCourseLectureNotesRP(@Path("courseID") courseID:String, @Path("academicYear") academicYear:String): Call<List<LecNotes>>?
+
+    @GET("/download_lecture_notes/{fileName}")
+    fun downloadLectureFile(@Path("fileName") fileName: String): Call<LecNotes>?
+
+    @GET("/api/student_marks_grades/")
+    fun getStudentsMarksAndGrades():Call<List<StudentRecords>>?
+
+
+    @GET("/api/student/Announcement/{courseID}/{academicYear}")
+    fun getAnnouncements(@Path("courseID") courseID: String,@Path("academicYear") academicYear: String):Call<List<Announcement>>?
+
+    @PATCH("/api/students/announcements/mark_as_read/{courseID}/{academicYear}")
+    fun markAsNotificationsAreRead(@Path("courseID") courseID: String,@Path("academicYear") academicYear: String):Call<MarkAsNotificationAreReadResponse>?
+
+
+
 
 
 
