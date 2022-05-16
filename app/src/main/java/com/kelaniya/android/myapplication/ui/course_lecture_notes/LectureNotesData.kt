@@ -29,7 +29,6 @@ class LectureNotesData(
             override fun onResponse(call: Call<List<LecNotes>>, response: Response<List<LecNotes>>) {
 
                 val lecNotes = response.body()
-                println("dataaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"+lecNotes.toString())
 
                 try{
                     recyclerView.adapter = CourseLectureNotesAdapter(lecNotes!!,findNavController)
@@ -49,4 +48,6 @@ class LectureNotesData(
             }
         })
     }
+
+
 }
