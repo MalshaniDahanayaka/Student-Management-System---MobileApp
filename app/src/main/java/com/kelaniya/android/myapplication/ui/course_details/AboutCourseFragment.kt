@@ -99,7 +99,7 @@ class AboutCourseFragment : Fragment() {
                 .setCancelable(false)
                 .setPositiveButton("Yes") { dialog, id ->
                     // successfully enrolled
-                    enrollToCourse(binding.coursesId.text as String,view)
+                    enrollToCourse(binding.coursesId.text as String,binding.academicYearValue.text as String,view)
 
                     val courseID:String = binding.coursesId.text.toString()
                     val academicYear:String = binding.academicYearValue.text.toString()
@@ -129,10 +129,10 @@ class AboutCourseFragment : Fragment() {
 
     }
 
-    private fun enrollToCourse(courseId: String, view: View) {
+    private fun enrollToCourse(courseId: String, academicYear: String, view: View) {
         val user = GetUserDetails().getData(view.context)
         val userEmail:String = user.userEmail.toString()
-        val enrollToCourseRequest : EnrollToCourseRequest = EnrollToCourseRequest(userEmail,courseId)
+        val enrollToCourseRequest : EnrollToCourseRequest = EnrollToCourseRequest(userEmail,courseId,academicYear)
         val retrofitBuilderObj = RetrofitBuilder()
         val retrofitBuilder = retrofitBuilderObj.retrofitBuilder
         var retrofitData = retrofitBuilder.enrollToCourse(enrollToCourseRequest)
