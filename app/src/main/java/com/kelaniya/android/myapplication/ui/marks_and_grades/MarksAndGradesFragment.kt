@@ -4,10 +4,12 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.kelaniya.android.myapplication.adapter.MarksAndGradesViewAdapter
 import com.kelaniya.android.myapplication.databinding.FragmentMarksAndGradesBinding
+import com.kelaniya.android.myapplication.ui.my_courses.EnrollCourseListData
 
 
 class MarksAndGradesFragment : Fragment() {
@@ -23,17 +25,17 @@ class MarksAndGradesFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        val slideshowViewModel =
-            ViewModelProvider(this).get(MarksAndGradesViewModel::class.java)
 
         _binding = FragmentMarksAndGradesBinding.inflate(inflater, container, false)
-        val root: View = binding.root
 
-        val textView: TextView = binding.textSlideshow
-        slideshowViewModel.text.observe(viewLifecycleOwner) {
-            textView.text = it
-        }
-        return root
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.marksAndGradesRecyclerView.layoutManager = LinearLayoutManager(view.context)
+        MarksAndGradesData(binding.marksAndGradesRecyclerView,findNavController()).setStudentRecordsView()
+
     }
 
     override fun onDestroyView() {
