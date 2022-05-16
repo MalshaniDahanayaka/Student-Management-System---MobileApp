@@ -9,26 +9,32 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_lecture_notes"
         android:layout_width="407dp"
-        android:layout_height="643dp"
-        android:layout_marginBottom="4dp"
+        android:layout_height="600dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/course_id_lecture_notes_page" />
 
     <TextView
         android:id="@+id/course_id_lecture_notes_page"
-        android:layout_width="383dp"
-        android:layout_height="29dp"
-        android:layout_marginStart="74dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginEnd="79dp"
+        android:layout_width="327dp"
+        android:layout_height="57dp"
         android:background="@drawable/et_style"
         android:fontFamily="@font/roboto_black"
-        android:text="                             SENG21345"
-        android:textSize="20dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.481"
+        android:text="SENG21345"
+        android:textSize="30dp"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/notification_button"
+        android:layout_width="80dp"
+        android:layout_height="67dp"
+        android:background="@drawable/ic_baseline_notifications_24"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="25dp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/course_id_lecture_notes_page"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

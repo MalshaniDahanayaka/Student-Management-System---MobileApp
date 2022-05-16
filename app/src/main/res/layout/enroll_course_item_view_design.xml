@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:layout_margin="10dp"
+    android:background="#54A4E4"
+    android:id="@+id/enroll_course_item_view"
+    app:cardElevation="6dp">
+
+    <TextView
+        android:id="@+id/enrolled_course_id_in_list"
+        android:layout_width="245dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="12dp"
+        android:fontFamily="@font/roboto_black"
+        android:text="course ID"
+        android:textColor="#6E6B6B"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/idforimageview"
+        android:layout_width="63dp"
+        android:layout_height="64dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/course_icon1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/enrolled_course_list_academic_year"
+        android:layout_width="242dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="5dp"
+        android:text="academicYear"
+        android:textSize="20dp"
+        app:layout_constraintStart_toEndOf="@+id/idforimageview"
+        app:layout_constraintTop_toBottomOf="@+id/enrolled_course_id_in_list" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
