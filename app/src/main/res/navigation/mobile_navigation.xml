@@ -148,6 +148,19 @@
         <action
             android:id="@+id/action_course_lecture_notes_to_connetion_error"
             app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_course_lecture_notes_to_course_announcement"
+            app:destination="@id/course_announcement" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/course_announcement"
+        android:name="com.kelaniya.android.myapplication.ui.notifications.NotificationListFragment"
+        android:label="Notifications"
+        tools:layout="@layout/fragment_notification_list" >
+        <action
+            android:id="@+id/action_course_announcement_to_course_lecture_notes"
+            app:destination="@id/course_lecture_notes" />
     </fragment>
 
 
