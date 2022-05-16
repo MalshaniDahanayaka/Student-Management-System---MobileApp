@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -18,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/D:/android%20sdk/icons/material/materialicons/grade/baseline_grade_24.xml" />
+                                      <entry key="url" value="file:/D:/android%20sdk/icons/material/materialicons/message/baseline_message_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -28,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="54c3a0" />
-                            <entry key="outputName" value="ic_baseline_grade_24" />
+                            <entry key="color" value="c9c024" />
+                            <entry key="outputName" value="ic_baseline_message_24" />
                             <entry key="sourceFile" value="C:\Users\Kasun Madhumal\Downloads\Student-Management-System---MobileApp" />
                           </map>
                         </option>

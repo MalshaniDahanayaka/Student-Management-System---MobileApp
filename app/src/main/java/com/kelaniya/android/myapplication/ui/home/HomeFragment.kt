@@ -32,6 +32,11 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        //default data (department courses)
+        val homePageData = HomePageData(binding.recyclerView,findNavController())
+        homePageData.getHomePageData("department")
+        binding.recyclerView.layoutManager = LinearLayoutManager(view.context)
+
 
         binding.departmentCourses.setOnClickListener{
             binding.departmentCourses.setTextColor(Color.GREEN)
