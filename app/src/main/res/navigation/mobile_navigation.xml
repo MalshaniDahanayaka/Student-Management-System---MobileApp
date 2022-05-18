@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_nav_home_to_connetion_error3"
             app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
     </fragment>
 
     <fragment
@@ -91,6 +94,12 @@
         <action
             android:id="@+id/action_connetion_error_to_signUp"
             app:destination="@id/signUp" />
+        <action
+            android:id="@+id/action_connetion_error_to_nav_profile"
+            app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_connetion_error_to_lecturer_home"
+            app:destination="@id/lecturer_home" />
     </fragment>
 
     <fragment
@@ -107,6 +116,9 @@
         <action
             android:id="@+id/action_login_to_connetion_error"
             app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_login_to_lecturer_home"
+            app:destination="@id/lecturer_home" />
     </fragment>
 
     <fragment
@@ -178,6 +190,33 @@
         <action
             android:id="@+id/action_course_announcement_full_body_to_course_announcement"
             app:destination="@id/course_announcement" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.kelaniya.android.myapplication.ui.profile.ProfileFragment"
+        android:label="nav_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_connetion_error"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_nav_profile_to_lecturer_home"
+            app:destination="@id/lecturer_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lecturer_home"
+        android:name="com.kelaniya.android.myapplication.ui.lecturer_home.LecturerHomeFragment"
+        android:label="lecturer_home"
+        tools:layout="@layout/fragment_lecturer_home" >
+        <action
+            android:id="@+id/action_lecturer_home_to_connetion_error"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_lecturer_home_to_nav_profile"
+            app:destination="@id/nav_profile" />
     </fragment>
 
 
