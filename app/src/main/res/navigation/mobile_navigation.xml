@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_home">
+    app:startDestination="@id/login">
 
     <fragment
         android:id="@+id/nav_home"
@@ -120,6 +120,9 @@
         <action
             android:id="@+id/action_signUp_to_connetion_error"
             app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_signUp_to_nav_home"
+            app:destination="@id/nav_home" />
     </fragment>
 
 
@@ -161,7 +164,23 @@
         <action
             android:id="@+id/action_course_announcement_to_course_lecture_notes"
             app:destination="@id/course_lecture_notes" />
+        <action
+            android:id="@+id/action_course_announcement_to_course_announcement_full_body"
+            app:destination="@id/course_announcement_full_body" />
     </fragment>
+
+    <fragment
+        android:id="@+id/course_announcement_full_body"
+        android:name="com.kelaniya.android.myapplication.ui.notifications.NotificationFullDetailsFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification_full_details" >
+
+        <action
+            android:id="@+id/action_course_announcement_full_body_to_course_announcement"
+            app:destination="@id/course_announcement" />
+    </fragment>
+
+
 
 
 
