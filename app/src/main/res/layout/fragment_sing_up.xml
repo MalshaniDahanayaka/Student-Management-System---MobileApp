@@ -15,7 +15,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/roboto_black"
-        android:layout_marginTop="20dp"
         android:text="Sign Up"
         android:textColor="#FFFFFF"
         android:textSize="38sp" />
@@ -26,14 +25,12 @@
         android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
         app:cardBackgroundColor="@color/white"
         app:cardMaxElevation="12dp"
         app:cardPreventCornerOverlap="true"
-        app:cardUseCompatPadding="true"
-        >
+        app:cardUseCompatPadding="true">
         
         <LinearLayout
             android:layout_width="match_parent"
@@ -53,11 +50,12 @@
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="60dp"
                     android:gravity="center">
                     <EditText
+                        android:id="@+id/signUp_user_id"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="40dp"
                         android:fontFamily="@font/roboto_light"
@@ -71,11 +69,12 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="60dp"
                     android:gravity="center">
                     <EditText
+                        android:id="@+id/signUp_user_email"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="40dp"
                         android:fontFamily="@font/roboto_light"
@@ -86,37 +85,21 @@
                         android:paddingLeft="20dp"
                         android:textColorHint="#5A5050" />
                 </LinearLayout>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:gravity="center">
-                    <EditText
-                        android:layout_width="match_parent"
-                        android:layout_height="60dp"
-                        android:layout_marginLeft="40dp"
-                        android:layout_marginRight="40dp"
-                        android:background="@drawable/et_style"
-                        android:fontFamily="@font/roboto_light"
-                        android:hint="Password"
-                        android:textColor="#232222"
-                        android:inputType="text"
-                        android:paddingLeft="20dp"
-                        android:textColorHint="#5A5050" />
-                </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="70dp"
+                    android:layout_height="60dp"
                     android:gravity="center">
                     <EditText
+                        android:id="@+id/signUp_user_first_name"
                         android:layout_width="match_parent"
-                        android:layout_height="60dp"
+                        android:layout_height="50dp"
                         android:layout_marginLeft="40dp"
                         android:layout_marginRight="40dp"
                         android:background="@drawable/et_style"
                         android:textColor="#232222"
                         android:fontFamily="@font/roboto_light"
-                        android:hint="Conform Password"
+                        android:hint="First Name"
                         android:inputType="text"
                         android:paddingLeft="20dp"
                         android:textColorHint="#5A5050"
@@ -124,18 +107,107 @@
                 </LinearLayout>
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center">
+                    <EditText
+                        android:id="@+id/signUp_user_last_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:background="@drawable/et_style"
+                        android:textColor="#232222"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="Last Name"
+                        android:inputType="text"
+                        android:paddingLeft="20dp"
+                        android:textColorHint="#5A5050"
+                        />
+                </LinearLayout>
 
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center">
+                    <EditText
+                        android:id="@+id/signUp_user_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:background="@drawable/et_style"
+                        android:fontFamily="@font/roboto_light"
+                        android:hint="Password"
+                        android:inputType="textPassword"
+                        android:textColor="#232222"
+                        android:paddingLeft="20dp"
+                        android:textColorHint="#5A5050" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:gravity="center">
+                    <EditText
+                        android:id="@+id/signUp_user_conform_password"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginRight="40dp"
+                        android:background="@drawable/et_style"
+                        android:textColor="#232222"
+                        android:fontFamily="@font/roboto_light"
+                        android:inputType="textPassword"
+                        android:hint="Conform Password"
+                        android:paddingLeft="20dp"
+                        android:textColorHint="#5A5050" />
+
+
+                </LinearLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <CheckBox
+                        android:id="@+id/signup_student_checkbox"
+                        android:layout_width="94dp"
+                        android:layout_height="35dp"
+                        android:layout_marginStart="135dp"
+                        android:layout_weight="1"
+                        android:text="student"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <CheckBox
+                        android:id="@+id/signup_lecturer_checkbox"
+                        android:layout_width="95dp"
+                        android:layout_height="29dp"
+                        android:layout_marginTop="2dp"
+                        android:text="lecturer"
+                        app:layout_constraintStart_toEndOf="@+id/signup_student_checkbox"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textView6"
+                        android:layout_width="84dp"
+                        android:layout_height="23dp"
+                        android:layout_marginStart="47dp"
+                        android:layout_marginTop="6dp"
+                        android:fontFamily="@font/roboto_black"
+                        android:text="User Role :"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
             </com.google.android.material.textfield.TextInputLayout>
 
         </LinearLayout>
-
-
-
-
-
-
-
 
     </androidx.cardview.widget.CardView>
 
@@ -166,12 +238,14 @@
                     android:gravity="center">
 
                     <Button
+                        android:id="@+id/signup_signup_button"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_marginLeft="150dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="50dp"
                         android:background="@drawable/ic_rectangle_grad"
                         android:fontFamily="@font/roboto_medium"
-                        android:layout_marginLeft="150dp"
-                        android:layout_marginBottom="50dp"
                         android:text="Sign Up"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"

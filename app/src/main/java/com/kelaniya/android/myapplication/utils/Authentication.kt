@@ -4,11 +4,14 @@ import android.content.Context
 import android.os.Bundle
 import android.widget.Toast
 import androidx.navigation.NavController
+import androidx.room.Database
 import androidx.room.Room
+import androidx.room.RoomDatabase
 import com.kelaniya.android.myapplication.R
 import com.kelaniya.android.myapplication.api.RetrofitBuilder
 import com.kelaniya.android.myapplication.model.*
 import com.kelaniya.android.myapplication.ui.login.RoomDatabase.AppDatabase
+import com.kelaniya.android.myapplication.ui.login.RoomDatabase.UserDao
 import com.kelaniya.android.myapplication.ui.login.RoomDatabase.UserEntity
 import retrofit2.Call
 import retrofit2.Callback
@@ -50,7 +53,9 @@ class Authentication(
                         userRole = userDetails.responseUser.role.elementAt(0).roleName
                         jwtToken = userDetails.jwtToken
 
-                        if(saveInDatabase(userEmail,userRole,jwtToken) == "done"){
+                        val result = AppDatabase.getAppDatabase(context)
+                        val userDao = result!!.userDao()
+                        if(saveInDatabase(userEmail,userRole,jwtToken,userDao) == "done"){
                             findNavController.navigate(R.id.action_login_to_nav_home)
                         }
 
@@ -70,24 +75,41 @@ class Authentication(
 
         }
 
-    fun saveInDatabase(userEmail:String, userRole:String, jwtToken:String ):String{
 
-        val db = Room.databaseBuilder(
-            appContext,
-            AppDatabase::class.java, "usersDatabase"
-        ).allowMainThreadQueries().build()
-
-        val userDao = db.userDao()
+    fun saveInDatabase(userEmail:String, userRole:String, jwtToken:String,userDao: UserDao ):String{
         userDao.deleteLastUser()
         val obj = UserEntity(1,userEmail,userRole,jwtToken)
         userDao.insertUser(obj)
-    //    val users: UserEntity = userDao.getUser()
+        val users: UserEntity = userDao.getUser()
         return "done"
     }
 
 
 
 
+}
+
+
+@Database(entities = [UserEntity::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun userDao(): UserDao
+
+    companion object {
+        private var INSTANCE: AppDatabase? = null
+
+        private fun getAppDatabase(context: Context): AppDatabase? {
+            if (INSTANCE == null) {
+                INSTANCE = Room.databaseBuilder<AppDatabase>(
+                    context.applicationContext, AppDatabase::class.java, "usersDatabase"
+                ).allowMainThreadQueries()
+                    .build()
+            }
+
+            return INSTANCE
+        }
+
+
+    }
 
 
 }

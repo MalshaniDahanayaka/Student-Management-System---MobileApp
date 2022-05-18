@@ -11,6 +11,7 @@ import androidx.navigation.NavController
 import androidx.recyclerview.widget.RecyclerView
 import com.kelaniya.android.myapplication.R
 import com.kelaniya.android.myapplication.model.Announcement
+import org.w3c.dom.Text
 
 
 class NotificationsListAdapter(private val announcements: List<Announcement>, private val findNavController: NavController): RecyclerView.Adapter<CustomViewHolderForNotifications>(){
@@ -32,6 +33,9 @@ class NotificationsListAdapter(private val announcements: List<Announcement>, pr
     override fun onBindViewHolder(holder: CustomViewHolderForNotifications, position: Int) {
 
         holder.notificationTitle.text  = announcements.elementAt(numberOfNotifications-1-position).title
+        holder.notificationBody.text = announcements.elementAt(numberOfNotifications-1-position).body
+        holder.lecturerEmail.text = announcements.elementAt(numberOfNotifications-1-position).lecturer_email
+        holder.courseIDValue.text = announcements.elementAt(numberOfNotifications-1-position).category
         if(announcements.elementAt(numberOfNotifications-1-position).view_state == null){
             holder.notificationTitle.setTextColor(Color.GREEN)
             holder.notificationTitle.setTextSize(1, 25.0F)
@@ -44,13 +48,25 @@ class NotificationsListAdapter(private val announcements: List<Announcement>, pr
 
 class CustomViewHolderForNotifications(val view: View, private val findNavController: NavController): RecyclerView.ViewHolder(view){
     val notificationTitle: TextView =    itemView.findViewById(R.id.notification_title)
+    val notificationBody:TextView = itemView.findViewById(R.id.send_notification_body)
+    val lecturerEmail:TextView = itemView.findViewById(R.id.send_lecturer_id)
+    val courseIDValue:TextView = itemView.findViewById(R.id.send_course_id)
 
 
 
     init{
+
         view.setOnClickListener{
-            findNavController.navigate(R.id.action_nav_home_to_about_course, Bundle().apply {
-//                putString("course",courseID.text.toString())
+
+            var announcementDetails = ArrayList<String>()
+            announcementDetails.add(notificationTitle.text.toString())
+            announcementDetails.add(notificationBody.text.toString())
+            announcementDetails.add(lecturerEmail.text.toString())
+            announcementDetails.add(courseIDValue.text.toString())
+
+
+            findNavController.navigate(R.id.action_course_announcement_to_course_announcement_full_body, Bundle().apply {
+                putStringArrayList("announcementDetails",announcementDetails)
             })
 
 
