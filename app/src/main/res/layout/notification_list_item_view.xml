@@ -15,7 +15,6 @@
         android:layout_height="67dp"
         android:layout_marginStart="9dp"
         android:layout_marginTop="16dp"
-        android:text="notification title"
         android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintStart_toEndOf="@+id/idforimageview"
@@ -30,6 +29,31 @@
         android:background="@drawable/ic_baseline_message_24"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/send_lecturer_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idforimageview" />
+
+    <TextView
+        android:id="@+id/send_notification_body"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="63dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idforimageview" />
+
+    <TextView
+        android:id="@+id/send_course_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/idforimageview" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
