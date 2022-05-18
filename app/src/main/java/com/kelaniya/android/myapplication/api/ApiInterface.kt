@@ -49,8 +49,14 @@ interface ApiInterface {
     @PATCH("/api/students/announcements/mark_as_read/{courseID}/{academicYear}")
     fun markAsNotificationsAreRead(@Path("courseID") courseID: String,@Path("academicYear") academicYear: String):Call<MarkAsNotificationAreReadResponse>?
 
+    @DELETE("/api/v1/student/unroll-from-subjects/{courseID}/{academicYear}")
+    fun unenrollFromCourse(@Path("courseID") courseID: String,@Path("academicYear") academicYear: String): Call<UnenrollFromCourseRequest>?
 
+    @POST("api/v1/auth/signup")
+    fun userSignup(@Body userSignupRequest: UserSignupRequest?): Call<UserSignupResponse>?
 
+    @POST("api/v1/user/get-otp")
+    fun getOTP(@Body otpRequest: OtpRequest?):Call<OtpResponse>?
 
 
 
