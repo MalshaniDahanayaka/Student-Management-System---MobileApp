@@ -11,10 +11,10 @@
 
     <TextView
         android:id="@+id/enrolled_course_id_in_list"
-        android:layout_width="245dp"
+        android:layout_width="200dp"
         android:layout_height="43dp"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="4dp"
         android:fontFamily="@font/roboto_black"
         android:text="course ID"
         android:textColor="#6E6B6B"
@@ -26,7 +26,7 @@
         android:id="@+id/idforimageview"
         android:layout_width="63dp"
         android:layout_height="64dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="4dp"
         android:layout_marginTop="16dp"
         android:background="@drawable/course_icon1"
         app:layout_constraintStart_toStartOf="parent"
@@ -34,7 +34,7 @@
 
     <TextView
         android:id="@+id/enrolled_course_list_academic_year"
-        android:layout_width="242dp"
+        android:layout_width="200dp"
         android:layout_height="24dp"
         android:layout_marginStart="21dp"
         android:layout_marginTop="5dp"
@@ -42,6 +42,18 @@
         android:textSize="20dp"
         app:layout_constraintStart_toEndOf="@+id/idforimageview"
         app:layout_constraintTop_toBottomOf="@+id/enrolled_course_id_in_list" />
+
+    <Button
+        android:id="@+id/course_unenroll_button"
+        android:layout_width="90dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="46dp"
+        android:text="Unenroll"
+        android:textSize="10dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintStart_toEndOf="@+id/enrolled_course_id_in_list"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
