@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.add_new_course.AddNewCourseModuleFragment">
+
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_description"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_semester" />
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_courseID"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="44dp"
+        android:text="courseID"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_courseName"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="courseName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_courseID" />
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_faculty_name"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="faculty name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_courseName" />
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_department"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="department name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_faculty_name" />
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_level"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="level"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_department" />
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_semester"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="semester"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_Academic_year" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:text="    Add New Course Module"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/roboto_black"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lecturer_add_new_course_Academic_year"
+        android:layout_width="125dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="15dp"
+        android:text="academic year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_level" />
+
+    <EditText
+        android:id="@+id/add_new_course_course_id"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="35dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_courseID"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/add_new_course_course_name"
+        android:layout_width="236dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="84dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_courseID"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/add_new_course_faculty_name"
+        android:layout_width="236dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="9dp"
+        android:drawSelectorOnTop="true"
+        android:prompt="@string/faculty_prompt"
+        android:entries="@array/faculty_arrays"
+        android:layout_marginTop="14dp"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_faculty_name"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_course_course_name" />
+
+    <Spinner
+        android:id="@+id/add_new_course_department_name"
+        android:layout_width="236dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="9dp"
+        android:prompt="@string/department_prompt"
+        android:entries="@array/department_arrays"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_department"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_course_faculty_name" />
+
+    <Spinner
+        android:id="@+id/add_new_course_level"
+        android:layout_width="236dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="9dp"
+        android:prompt="@string/level_prompt"
+        android:entries="@array/level_arrays"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_level"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_course_department_name" />
+
+    <Spinner
+        android:id="@+id/add_new_course_semester"
+        android:layout_width="236dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:prompt="@string/semester_prompt"
+        android:entries="@array/semester_arrays"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_semester"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_course_academic_year" />
+
+    <Spinner
+        android:id="@+id/add_new_course_academic_year"
+        android:layout_width="236dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:prompt="@string/academicYear_prompt"
+        android:entries="@array/academicYear_arrays"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_Academic_year"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_course_level" />
+
+
+    <EditText
+        android:id="@+id/add_new_course_description"
+        android:layout_width="236dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="12dp"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="20"
+        android:minLines="6"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toEndOf="@+id/lecturer_add_new_course_description"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_course_semester" />
+
+    <Button
+        android:id="@+id/add_new_course_add_button"
+        android:layout_width="120dp"
+        android:layout_height="59dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/lecture_home_top_button"
+        android:text="ADD"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_add_new_course_description" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
