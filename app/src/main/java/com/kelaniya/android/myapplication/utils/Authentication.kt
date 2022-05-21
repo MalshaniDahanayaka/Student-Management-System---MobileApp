@@ -56,7 +56,11 @@ class Authentication(
                         val result = AppDatabase.getAppDatabase(context)
                         val userDao = result!!.userDao()
                         if(saveInDatabase(userEmail,userRole,jwtToken,userDao) == "done"){
-                            findNavController.navigate(R.id.action_login_to_nav_home)
+                            if(userRole == "Student") {
+                                findNavController.navigate(R.id.action_login_to_nav_home)
+                            }else if(userRole == "Lecturer"){
+                                findNavController.navigate(R.id.action_login_to_lecturer_home)
+                            }
                         }
 
                     }

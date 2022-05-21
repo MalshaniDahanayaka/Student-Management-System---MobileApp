@@ -100,6 +100,21 @@
         <action
             android:id="@+id/action_connetion_error_to_lecturer_home"
             app:destination="@id/lecturer_home" />
+        <action
+            android:id="@+id/action_connetion_error_to_lecturer_Uploaded_lecture_notes"
+            app:destination="@id/lecturer_Uploaded_lecture_notes" />
+        <action
+            android:id="@+id/action_connetion_error_to_lecturer_add_new_course_module"
+            app:destination="@id/lecturer_add_new_course_module" />
+        <action
+            android:id="@+id/action_connetion_error_to_lecturer_add_new_lecture_notes"
+            app:destination="@id/lecturer_add_new_lecture_notes" />
+        <action
+            android:id="@+id/action_connetion_error_to_lecturer_add_announcements_list"
+            app:destination="@id/lecturer_add_announcements_list" />
+        <action
+            android:id="@+id/action_connetion_error_to_lecturer_add_new_announcement"
+            app:destination="@id/lecturer_add_new_announcement" />
     </fragment>
 
     <fragment
@@ -217,8 +232,120 @@
         <action
             android:id="@+id/action_lecturer_home_to_nav_profile"
             app:destination="@id/nav_profile" />
+        <action
+            android:id="@+id/action_lecturer_home_to_lecturer_Uploaded_lecture_notes"
+            app:destination="@id/lecturer_Uploaded_lecture_notes" />
+        <action
+            android:id="@+id/action_lecturer_home_to_lecturer_add_new_course_module"
+            app:destination="@id/lecturer_add_new_course_module" />
+        <action
+            android:id="@+id/action_lecturer_home_to_lecturer_add_announcements_list"
+            app:destination="@id/lecturer_add_announcements_list" />
+
     </fragment>
 
+
+    <fragment
+        android:id="@+id/lecturer_Uploaded_lecture_notes"
+        android:name="com.kelaniya.android.myapplication.ui.lecturer_upload_lecture_notes.LecturerUploadedLectureNotesFragment"
+        android:label="lecturer Uploaded Notes"
+        tools:layout="@layout/fragment_lecturer_uploaded_lecture_notes" >
+        <action
+            android:id="@+id/action_lecturer_Uploaded_lecture_notes_to_lecturer_home"
+            app:destination="@id/lecturer_home" />
+        <action
+            android:id="@+id/action_lecturer_Uploaded_lecture_notes_to_connetion_error"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_lecturer_Uploaded_lecture_notes_to_lecturer_add_new_lecture_notes"
+            app:destination="@id/lecturer_add_new_lecture_notes" />
+        <action
+            android:id="@+id/action_lecturer_Uploaded_lecture_notes_to_lecturer_add_announcements_list"
+            app:destination="@id/lecturer_add_announcements_list" />
+        <action
+            android:id="@+id/action_lecturer_Uploaded_lecture_notes_to_lecturer_enroll_students_list"
+            app:destination="@id/lecturer_enroll_students_list" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lecturer_add_new_course_module"
+        android:name="com.kelaniya.android.myapplication.ui.add_new_course.AddNewCourseModuleFragment"
+        android:label="lecturer add new  course"
+        tools:layout="@layout/fragment_add_new_course_module" >
+        <action
+            android:id="@+id/action_lecturer_add_new_course_module_to_lecturer_home"
+            app:destination="@id/lecturer_home" />
+        <action
+            android:id="@+id/action_lecturer_add_new_course_module_to_connetion_error"
+            app:destination="@id/connetion_error" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/lecturer_add_new_lecture_notes"
+        android:name="com.kelaniya.android.myapplication.ui.add_new_lecturer_notes.AddNewLectureNotesFragment"
+        android:label="lecturer add new  lecture Note"
+        tools:layout="@layout/fragment_add_new_lecture_notes" >
+        <action
+            android:id="@+id/action_lecturer_add_new_lecture_notes_to_lecturer_Uploaded_lecture_notes"
+            app:destination="@id/lecturer_Uploaded_lecture_notes" />
+        <action
+            android:id="@+id/action_lecturer_add_new_lecture_notes_to_connetion_error"
+            app:destination="@id/connetion_error" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/lecturer_add_announcements_list"
+        android:name="com.kelaniya.android.myapplication.ui.lecturer_announcements.LecturerAnnouncementsListFragment"
+        android:label="lecturer announcements list"
+        tools:layout="@layout/fragment_lecturer_announcements_list" >
+        <action
+            android:id="@+id/action_lecturer_add_announcements_list_to_lecturer_home"
+            app:destination="@id/lecturer_home" />
+        <action
+            android:id="@+id/action_lecturer_add_announcements_list_to_connetion_error"
+            app:destination="@id/connetion_error" />
+        <action
+            android:id="@+id/action_lecturer_add_announcements_list_to_lecturer_Uploaded_lecture_notes"
+            app:destination="@id/lecturer_Uploaded_lecture_notes" />
+        <action
+            android:id="@+id/action_lecturer_add_announcements_list_self"
+            app:destination="@id/lecturer_add_announcements_list" />
+        <action
+            android:id="@+id/action_lecturer_add_announcements_list_to_course_announcement_full_body"
+            app:destination="@id/course_announcement_full_body" />
+        <action
+            android:id="@+id/action_lecturer_add_announcements_list_to_lecturer_add_new_announcement"
+            app:destination="@id/lecturer_add_new_announcement" />
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/lecturer_add_new_announcement"
+        android:name="com.kelaniya.android.myapplication.ui.lecturer_announcements.AddNewAnnouncementFragment"
+        android:label="add new announcement"
+        tools:layout="@layout/fragment_add_new_announcement" >
+
+        <action
+            android:id="@+id/action_lecturer_add_new_announcement_to_lecturer_add_announcements_list"
+            app:destination="@id/lecturer_add_announcements_list" />
+        <action
+            android:id="@+id/action_lecturer_add_new_announcement_to_connetion_error"
+            app:destination="@id/connetion_error" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/lecturer_enroll_students_list"
+        android:name="com.kelaniya.android.myapplication.ui.lecturer_add_students_marks_and_grades.EnrollStudentsListFragment"
+        android:label="enroll students list"
+        tools:layout="@layout/fragment_enroll_students_list" >
+
+        <action
+            android:id="@+id/action_lecturer_enroll_students_list_to_lecturer_Uploaded_lecture_notes"
+            app:destination="@id/lecturer_Uploaded_lecture_notes" />
+    </fragment>
 
 
 

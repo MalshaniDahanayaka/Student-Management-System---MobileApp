@@ -7,14 +7,14 @@
     tools:context=".ui.profile.ProfileFragment">
 
 
-    <EditText
+    <Spinner
         android:id="@+id/user_profile_department"
-        android:layout_width="410dp"
-        android:layout_height="53dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="204dp"
-        android:ems="10"
-        android:inputType="textPersonName"
+        android:layout_width="401dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="216dp"
+        android:entries="@array/department_arrays"
+        android:prompt="@string/department_prompt"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView16" />
 
@@ -130,7 +130,8 @@
         android:id="@+id/user_profile_first_name"
         android:layout_width="410dp"
         android:layout_height="53dp"
-        android:layout_marginStart="1dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"

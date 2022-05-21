@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.lecturer_upload_lecture_notes.LecturerUploadedLectureNotesFragment">
+
+
+    <Button
+        android:id="@+id/lecturer_uploaded_lec_notes_notification_button"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/ic_baseline_message_12"
+        app:layout_constraintEnd_toStartOf="@+id/lecturer_uploaded_lec_notes_add_marks_and_grades"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/lecturer_uploaded_lec_notes_course_id"
+        android:layout_width="235dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="28dp"
+        android:background="@drawable/et_style"
+        android:fontFamily="@font/roboto_black"
+        android:text="SENG23223"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/lecturer_uploaded_lec_notes_add_new_button"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/lecturer_uploaded_lec_notes_add_new_button"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="1dp"
+
+        android:background="@drawable/ic_baseline_add_circle_24"
+        app:layout_constraintEnd_toStartOf="@+id/lecturer_uploaded_lec_notes_notification_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lecturer_uploaded_lecture_notes_recyclerView"
+        android:layout_width="409dp"
+        android:layout_height="667dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_uploaded_lec_notes_course_id" />
+
+    <Button
+        android:id="@+id/lecturer_uploaded_lec_notes_add_marks_and_grades"
+        android:layout_width="53dp"
+        android:layout_height="53dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/students_marks_and_grades"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

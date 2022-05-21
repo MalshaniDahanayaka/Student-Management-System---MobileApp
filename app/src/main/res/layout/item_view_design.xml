@@ -20,7 +20,7 @@
         app:layout_constraintTop_toBottomOf="@+id/subject_name" />
 
     <TextView
-        android:id="@+id/enrolled_course_id"
+        android:id="@+id/lecturer_uploaded_lecture_notes_description"
         android:layout_width="274dp"
         android:layout_height="21dp"
         android:layout_marginStart="100dp"
@@ -60,7 +60,7 @@
         android:text="subject_id"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/idforimageview"
-        app:layout_constraintTop_toBottomOf="@+id/enrolled_course_id" />
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_uploaded_lecture_notes_description" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

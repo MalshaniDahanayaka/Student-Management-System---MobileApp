@@ -28,7 +28,7 @@ class UserJwtToken :Application() {
                 return "Bearer "
 
             } catch (e: Exception) {
-                Log.i("oooooooooooooooooooooooooooo", e.message.toString())
+                Log.i("Log i", e.message.toString())
                 return "null"
 
             }

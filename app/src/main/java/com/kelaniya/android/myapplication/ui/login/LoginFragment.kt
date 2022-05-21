@@ -1,10 +1,12 @@
 package com.kelaniya.android.myapplication.ui.login
 
+import android.content.Context
 import androidx.fragment.app.Fragment
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.kelaniya.android.myapplication.R
@@ -36,8 +38,6 @@ class LoginFragment : Fragment(){
         super.onViewCreated(view, savedInstanceState)
 
 
-
-
         binding.buttonSignup.setOnClickListener {
             findNavController().navigate(R.id.action_login_to_signUp)
 
@@ -49,6 +49,7 @@ class LoginFragment : Fragment(){
             if(userEmail!="" && password != ""){
                 val obj = EmailValidation()
                 if (obj.isValidString(userEmail)){
+
                     val user = JwtUserRequest(userEmail,password)
                     val authObj = Authentication(user,view.context,findNavController())
                     authObj.authenticate()
@@ -73,6 +74,7 @@ class LoginFragment : Fragment(){
         }
 
     }
+
 
 
     override fun onDestroyView() {

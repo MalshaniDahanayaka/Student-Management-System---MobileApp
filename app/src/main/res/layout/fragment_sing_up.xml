@@ -61,7 +61,7 @@
                         android:fontFamily="@font/roboto_light"
                         android:background="@drawable/et_style"
                         android:shadowRadius="40"
-                        android:hint="Student ID"
+                        android:hint="User ID"
                         android:textColor="#232222"
                         android:inputType="text"
                         android:paddingLeft="20dp"

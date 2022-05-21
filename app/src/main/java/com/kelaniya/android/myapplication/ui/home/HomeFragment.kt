@@ -34,7 +34,7 @@ class HomeFragment : Fragment() {
 
         //default data (department courses)
         val homePageData = HomePageData(binding.recyclerView,findNavController())
-        homePageData.getHomePageData("department")
+        homePageData.getHomePageData("all")
         binding.recyclerView.layoutManager = LinearLayoutManager(view.context)
 
 

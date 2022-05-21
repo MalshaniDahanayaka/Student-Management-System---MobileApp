@@ -155,10 +155,7 @@ class AboutCourseFragment : Fragment() {
             }
 
             override fun onFailure(call: Call<EnrollToCourseRequest>, t: Throwable) {
-//                findNavController.navigate(R.id.action_nav_home_to_connetion_error)
-                findNavController().navigate(R.id.action_nav_home_to_connetion_error, Bundle().apply {
-                    putString("last_location","homePage")
-                })
+
                 Log.i("FirstFragment", t.message!!)
             }
         })
