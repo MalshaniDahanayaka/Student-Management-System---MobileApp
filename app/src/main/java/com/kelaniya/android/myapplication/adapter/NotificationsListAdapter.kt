@@ -36,10 +36,7 @@ class NotificationsListAdapter(private val announcements: List<Announcement>, pr
         holder.notificationBody.text = announcements.elementAt(numberOfNotifications-1-position).body
         holder.lecturerEmail.text = announcements.elementAt(numberOfNotifications-1-position).lecturer_email
         holder.courseIDValue.text = announcements.elementAt(numberOfNotifications-1-position).category
-        if(announcements.elementAt(numberOfNotifications-1-position).view_state == null){
-            holder.notificationTitle.setTextColor(Color.GREEN)
-            holder.notificationTitle.setTextSize(1, 25.0F)
-        }
+
 
 
 

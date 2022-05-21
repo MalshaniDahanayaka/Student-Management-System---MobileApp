@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.add_new_lecturer_notes.AddNewLectureNotesFragment">
+
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/roboto_black"
+        android:text="          Add Lecture Note"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="102dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="35dp"
+        android:text="Course ID :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/add_new_lecture_note_course_id"
+        android:layout_width="236dp"
+        android:layout_height="32dp"
+
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="102dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:text="Academic Year"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/add_new_lecture_note_academic_year"
+        android:layout_width="236dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@+id/textView15"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_lecture_note_course_id" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="102dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:text="Upload Note"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+
+    <Button
+        android:id="@+id/add_new_lecture_note_select_pdf_button"
+        android:layout_width="236dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="26dp"
+        android:text="Browse"
+        app:layout_constraintStart_toEndOf="@+id/textView21"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_lecture_note_academic_year" />
+
+    <Button
+        android:id="@+id/add_new_lecture_note_upload_button"
+        android:layout_width="363dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="240dp"
+        android:layout_marginEnd="24dp"
+        android:text="Upload"
+        android:textSize="20dp"
+        android:background="@drawable/et_style"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_lecture_note_select_pdf_button" />
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="102dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="22dp"
+        android:text="Description"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+    <EditText
+        android:id="@+id/add_new_lecture_note_description"
+        android:layout_width="236dp"
+        android:layout_height="172dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="26dp"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="20"
+        android:minLines="6"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toEndOf="@+id/textView29"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_lecture_note_select_pdf_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
