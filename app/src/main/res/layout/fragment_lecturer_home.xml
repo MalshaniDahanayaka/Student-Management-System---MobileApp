@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.lecturer_home.LecturerHomeFragment">
+
+    <Button
+        android:id="@+id/lecturer_courses_button"
+        android:layout_width="379dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/lecture_home_top_button"
+        android:fontFamily="@font/roboto_medium"
+        android:text="Courses"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/lecturer_home_recycler_view"
+        android:layout_width="400dp"
+        android:layout_height="584dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/lecturer_home_button_add_new_course"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_courses_button" />
+
+    <Button
+        android:id="@+id/lecturer_home_button_add_new_course"
+        android:layout_width="406dp"
+        android:layout_height="47dp"
+        android:layout_marginBottom="20dp"
+        android:background="#0AC127"
+        android:text="Add New Course Module"
+        android:textSize="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lecturer_home_recycler_view"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

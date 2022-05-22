@@ -23,7 +23,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/D:/android%20sdk/icons/material/materialicons/message/baseline_message_24.xml" />
+                                      <entry key="url" value="file:/D:/android%20sdk/icons/material/materialicons/supervised_user_circle/baseline_supervised_user_circle_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -33,8 +33,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="c9c024" />
-                            <entry key="outputName" value="ic_baseline_message_24" />
+                            <entry key="color" value="5e7adc" />
+                            <entry key="outputName" value="students_marks_and_grades" />
                             <entry key="sourceFile" value="C:\Users\Kasun Madhumal\Downloads\Student-Management-System---MobileApp" />
                           </map>
                         </option>

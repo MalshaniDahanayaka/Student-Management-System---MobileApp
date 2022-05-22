@@ -58,6 +58,48 @@ interface ApiInterface {
     @POST("api/v1/user/get-otp")
     fun getOTP(@Body otpRequest: OtpRequest?):Call<OtpResponse>?
 
+    @GET("/api/student/getStudentDetails")
+    fun getStudentDetails():Call<Student>?
 
+    @POST("/api/v1/student/update-details")
+    fun updateDetails(@Body student: Student?):Call<Student>?
+
+    @GET("/lecturer/courses")
+    fun getLecturerTeachingCourses():Call<List<Courses>>?
+
+    //delete course module
+    @HTTP(method = "DELETE", path = "/drop/course/", hasBody = true)
+    fun removeCourseModule(@Body deleteCourseModule: DeleteCourseModule?):Call<DeleteCourseModule>?
+
+    //delete lecturer note
+    @DELETE("/delete/lecture_note/{fileName}")
+    fun deleteLectureNote(@Path("fileName") fileName: String): Call<DeleteLectureNote>?
+
+    @POST("/lectures/new_course/")
+    fun addNewCourseModule(@Body course: Courses?):Call<Courses>?
+
+
+    @HTTP(method = "DELETE", path = "/lec/delete_announcement/", hasBody = true)
+    fun deleteAnnouncement(@Body deleteAnnouncementRequest: DeleteAnnouncementRequest?):Call<DeleteAnnouncementResponse>?
+
+
+
+    @POST("/lec/create_announcement/")
+    fun makeAnnouncement(@Body createNewAnnouncementRequest: CreateNewAnnouncementRequest?):Call<Announcement>?
+
+
+    //show enroll students with marks
+    @GET("/lecturer/course_marks_and_grades/{course_id}")
+    fun getSelectedCourseStudentsMarksAndGrades(@Path("course_id") course_id: String):Call<List<EnrollStudentsMarksAndGradesResponse>>?
+
+
+
+    //update marks and grades
+    @PATCH("/update/marks_and_grades/")
+    fun updateMarksAndGrades(@Body studentRecordsUpdateRequest: StudentRecordsUpdateRequest?):Call<StudentRecordsUpdateRequest>?
 
 }
+
+
+
+

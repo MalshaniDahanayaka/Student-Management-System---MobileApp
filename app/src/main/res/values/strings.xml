@@ -33,4 +33,59 @@
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="title_activity_lecturer_view">LecturerView</string>
     <string name="title_activity_lecture">LectureActivity</string>
+
+    <string name="faculty_prompt">select a faculty</string>
+    <string-array name="faculty_arrays">
+        <item>---</item>
+        <item>Science</item>
+        <item>Art</item>
+        <item>Commerce</item>
+        <item>IT</item>
+        <item>Tech</item>
+    </string-array>
+
+    <string name="department_prompt">select a faculty</string>
+    <string-array name="department_arrays">
+        <item>---</item>
+        <item>software engineering</item>
+        <item>bio</item>
+        <item>chemistry</item>
+        <item>applied maths</item>
+        <item>computer science</item>
+        <item>econ</item>
+        <item>geography</item>
+        <item>agriculture</item>
+        <item>food science</item>
+        <item>music</item>
+        <item>drama</item>
+    </string-array>
+
+
+    <string name="level_prompt">select a faculty</string>
+    <string-array name="level_arrays">
+        <item>---</item>
+        <item>level 1</item>
+        <item>level 2</item>
+        <item>level 3</item>
+        <item>level 4</item>
+    </string-array>
+
+    <string name="academicYear_prompt">select a faculty</string>
+    <string-array name="academicYear_arrays">
+        <item>---</item>
+        <item>2017-2018</item>
+        <item>2018-2019</item>
+        <item>2019-2020</item>
+        <item>2020-2021</item>
+        <item>2021-2022</item>
+    </string-array>
+
+    <string name="semester_prompt">select a faculty</string>
+    <string-array name="semester_arrays">
+        <item>---</item>
+        <item>semester 1</item>
+        <item>semester 2</item>
+    </string-array>
+
+
 </resources>

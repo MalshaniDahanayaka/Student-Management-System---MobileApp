@@ -10,11 +10,9 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.navigation.NavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.kelaniya.android.myapplication.R
 import com.kelaniya.android.myapplication.api.RetrofitBuilder
-import com.kelaniya.android.myapplication.model.Courses
 import com.kelaniya.android.myapplication.model.StudentsEnrollSubjects
 import com.kelaniya.android.myapplication.model.UnenrollFromCourseRequest
 import retrofit2.Call

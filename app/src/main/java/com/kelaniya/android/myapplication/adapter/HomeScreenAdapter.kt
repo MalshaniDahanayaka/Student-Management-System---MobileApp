@@ -40,7 +40,7 @@ class Adapter(private val courses: List<Courses>, private val findNavController:
 }
 
 class CustomViewHolder(val view: View, private val findNavController: NavController): RecyclerView.ViewHolder(view){
-    val courseID: TextView =    itemView.findViewById(R.id.enrolled_course_id)
+    val courseID: TextView =    itemView.findViewById(R.id.lecturer_uploaded_lecture_notes_description)
     val subjectName: TextView = itemView.findViewById(R.id.subject_name)
     val department: TextView = itemView.findViewById(R.id.department_name)
     val level: TextView = itemView.findViewById(R.id.notification_title)

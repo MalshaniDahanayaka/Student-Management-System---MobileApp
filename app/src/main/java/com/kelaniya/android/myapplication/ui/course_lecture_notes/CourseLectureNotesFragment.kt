@@ -48,7 +48,7 @@ class CourseLectureNotesFragment : Fragment() {
         val obj:LectureNotesData = LectureNotesData(courseDetails[0],courseDetails[1],binding.recyclerViewLectureNotes,findNavController())
         obj.setDataInPage()
         val notificationButton:Button = binding.notificationButton
-        setNewNotificationCount(courseDetails[0],courseDetails[1],notificationButton)
+
 
 
         binding.notificationButton.setOnClickListener {
@@ -64,51 +64,4 @@ class CourseLectureNotesFragment : Fragment() {
 
     }
 
-    private fun setNewNotificationCount(
-        courseID: String,
-        academicYear: String,
-        notificationButton: Button
-    ){
-        val retrofit = RetrofitBuilder()
-        val retrofitBuilder = retrofit.retrofitBuilder
-
-
-        val retrofitData = retrofitBuilder.getAnnouncements(courseID,academicYear)
-
-        retrofitData!!.enqueue(object : Callback<List<Announcement>> {
-            override fun onResponse(call: Call<List<Announcement>>, response: Response<List<Announcement>>) {
-
-                val announcement = response.body()
-                var count = 0
-
-                try{
-
-                    for (i in 0 until announcement!!.count()){
-
-                        if(announcement!!.elementAt(i).view_state == null) {
-                            count++
-                        }
-
-                    }
-
-                    notificationButton.text = "$count"
-                    notificationButton.setTextColor(Color.GREEN)
-
-
-
-                }catch (e: Exception){
-
-                    Log.i("error","empty results")
-
-                }
-
-            }
-
-            override fun onFailure(call: Call<List<Announcement>>, t: Throwable) {
-                Log.i("FirstFragment", t.message!!)
-            }
-        })
-
-
-    }
 }

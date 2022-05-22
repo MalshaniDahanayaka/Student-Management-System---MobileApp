@@ -2,6 +2,7 @@ package com.kelaniya.android.myapplication.ui.profile
 
 import android.os.Bundle
 import android.util.Log
+import androidx.core.view.get
 import com.kelaniya.android.myapplication.R
 import com.kelaniya.android.myapplication.adapter.MarksAndGradesViewAdapter
 import com.kelaniya.android.myapplication.api.RetrofitBuilder
@@ -30,7 +31,7 @@ class RetrieveProfileData {
                     binding.userProfileUserId.setText(student.student_id)
                     binding.userProfileFirstName.setText(student.first_name)
                     binding.userProfileLastName.setText(student.last_name)
-                    binding.userProfileDepartment.setText(student.department)
+                    binding.userProfileDepartment.get(0)
 
                 }catch (e: Exception){
 

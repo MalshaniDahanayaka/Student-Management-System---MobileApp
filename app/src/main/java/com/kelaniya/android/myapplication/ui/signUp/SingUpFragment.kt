@@ -67,7 +67,7 @@ class SingUpFragment : Fragment() {
             }else if(studentCheckbox && lectureCheckBox){
                 Toast.makeText(view.context,"Only select One user Role", Toast.LENGTH_SHORT).show()
             }else if(password != conformPassword){
-                Toast.makeText(view.context,"Conform Password Not Matching", Toast.LENGTH_SHORT).show()
+                Toast.makeText(view.context,"Confirm Password Not Matching", Toast.LENGTH_SHORT).show()
             }else if (!obj.isValidString(userEmail)){
                 Toast.makeText(view.context,"not valid email", Toast.LENGTH_SHORT).show()
             }else{
@@ -115,7 +115,7 @@ class SingUpFragment : Fragment() {
 
     fun showDialog(context: Context, otp: String, userSignupRequest: UserSignupRequest) {
         val builder: AlertDialog.Builder = android.app.AlertDialog.Builder(context)
-        builder.setTitle("Title")
+        builder.setTitle("OTP Code")
 
 // Set up the input
         val input = EditText(context)

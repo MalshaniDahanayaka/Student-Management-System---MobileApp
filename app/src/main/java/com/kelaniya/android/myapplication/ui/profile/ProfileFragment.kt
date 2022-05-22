@@ -40,6 +40,7 @@ class ProfileFragment : Fragment() {
         }
         else if(userRole == "Lecturer"){
 
+
         }
 
         binding.userProfileUpdateButton.setOnClickListener {
@@ -49,7 +50,7 @@ class ProfileFragment : Fragment() {
                                            binding.userProfileUserId.text.toString(),
                                            binding.userProfileFirstName.text.toString(),
                                            binding.userProfileLastName.text.toString(),
-                                           binding.userProfileDepartment.text.toString(),
+                                           binding.userProfileDepartment.selectedItem.toString(),
                                   "null"
                                            )
                 UpdateProfileData().updateStudentsProfileData(student,view.context)

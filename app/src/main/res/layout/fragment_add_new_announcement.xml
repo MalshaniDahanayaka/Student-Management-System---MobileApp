@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.lecturer_announcements.AddNewAnnouncementFragment">
+
+
+    <TextView
+        android:id="@+id/textView33"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="52dp"
+        android:text="Body :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView34" />
+
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="20dp"
+        android:text="TItle :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView32" />
+
+    <TextView
+        android:id="@+id/textView32"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="22dp"
+        android:text="Academic Year :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="22dp"
+        android:text="Lecturer Email :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="410dp"
+        android:layout_height="68dp"
+        android:layout_marginEnd="1dp"
+        android:background="@color/teal_200"
+        android:fontFamily="@font/roboto_black"
+        android:text="    Add New Announcement"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="121dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginTop="52dp"
+        android:text="Category :"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/add_new_announcement_category"
+        android:layout_width="225dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="52dp"
+        app:layout_constraintStart_toEndOf="@+id/textView14"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/add_new_announcement_lecturer_email"
+        android:layout_width="225dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="22dp"
+        app:layout_constraintStart_toEndOf="@+id/textView20"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_announcement_category" />
+
+    <Spinner
+        android:id="@+id/add_new_announcement_academic_year"
+        android:layout_width="225dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="22dp"
+        android:prompt="@string/academicYear_prompt"
+        android:entries="@array/academicYear_arrays"
+        app:layout_constraintStart_toEndOf="@+id/textView32"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_announcement_lecturer_email" />
+
+    <Button
+        android:id="@+id/add_new_announcement_post_button"
+        android:layout_width="414dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="16dp"
+        android:text="Post"
+        android:background="@color/colorPrimary"
+        android:textSize="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_announcement_body" />
+
+    <EditText
+        android:id="@+id/add_new_announcement_title"
+        android:layout_width="226dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="20"
+        android:minLines="6"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toEndOf="@+id/textView34"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_announcement_academic_year" />
+
+    <EditText
+        android:id="@+id/add_new_announcement_body"
+        android:layout_width="226dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        android:lines="8"
+        android:maxLines="20"
+        android:minLines="6"
+        android:scrollbars="vertical"
+        app:layout_constraintStart_toEndOf="@+id/textView33"
+        app:layout_constraintTop_toBottomOf="@+id/add_new_announcement_title" />
+</androidx.constraintlayout.widget.ConstraintLayout>

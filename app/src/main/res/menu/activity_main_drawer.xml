@@ -17,8 +17,9 @@
             android:icon="@drawable/ic_baseline_grade_24"
             android:title="Marks And Grades" />
         <item
-            android:id="@+id/nav_notifications"
-            android:icon="@drawable/ic_baseline_grade_24"
-            android:title="Notifications" />
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_baseline_account_circle_24"
+            android:title="Profile" />
     </group>
+
 </menu>
